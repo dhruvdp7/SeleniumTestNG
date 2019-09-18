@@ -28,17 +28,18 @@ public class AssertionsCheck {
 
 	@Test
 	public void checkAssertions() {
-		String expectedTitle = "qainotech - Google Search";
+		String expectedTitle = "qainfotech - Google Search";
 		String ActualTitle = driver.getTitle();
 		System.out.println(ActualTitle);
-		Assert.assertEquals(ActualTitle, expectedTitle);
-		//Assert.assertFalse(ActualTitle.equals("qainfotech - Google Search"));
+		//Assert.assertEquals(ActualTitle, expectedTitle, "Assertion Failed: Titles did not matched");
+		//Assert.assertFalse(ActualTitle.equals("qainfotech - Google Search"), "Assertion Failed");
 		//Assert.fail();
-		Assert.assertNotEquals(ActualTitle, expectedTitle );
-		Assert.assertTrue(ActualTitle.equals(expectedTitle));
+		Assert.assertNotEquals(ActualTitle, expectedTitle, "Assertion Failed" );
+		//Assert.assertTrue(ActualTitle.equals(expectedTitle),"Assertion Failed : Titles did not matched");
+		System.out.println("Assertion Passed: Title Matched");
 	}
 
-	@AfterTest
+	//@AfterTest
 	public void tearDownTest()
 	{
 		System.out.println("***After Test***");

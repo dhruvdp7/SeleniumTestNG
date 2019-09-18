@@ -3,14 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testNG.dependsOnTest">
+      <class name="testNG.ParameterizedTest">
         <methods>
-          <include name="step4"/>
-          <include name="step3"/>
-          <include name="step1"/>
-          <include name="step2"/>
+          <include name="printBrowser"/>
         </methods>
-      </class> <!-- testNG.dependsOnTest -->
+      </class> <!-- testNG.ParameterizedTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
